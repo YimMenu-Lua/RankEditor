@@ -63,9 +63,9 @@ rank_editor_tab:add_imgui(function()
     if ImGui.Button("Set LSCM Tier") then
         script.run_in_fiber(function()
             local rep_value    = GET_REP_FOR_LSCM_TIER(input_lscm_tier)
-            local current_tier = globals.get_int(1964471 + 8 + 2)
+            local current_tier = globals.get_int(1965235 + 8 + 2)
             stats.set_int("MPX_CAR_CLUB_REP", rep_value)
-            scr_function.call_script_function("freemode", 0x6914D5, "void", {
+            scr_function.call_script_function("freemode", 0x6B73C9, "void", {
                 { "int", current_tier },
                 { "int", input_lscm_tier }
             })
@@ -77,7 +77,7 @@ rank_editor_tab:add_imgui(function()
     
     if ImGui.Button("Add AP") then
         script.run_in_fiber(function()
-            scr_function.call_script_function("freemode", 0x47C4F0, "void", {
+            scr_function.call_script_function("freemode", 0x49DE6B, "void", {
                 { "int", input_arena_ap },
                 { "bool", false } -- Is gained from a match
             })
